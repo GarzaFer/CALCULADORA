@@ -36,6 +36,9 @@
             ordenamientosToolStripMenuItem = new ToolStripMenuItem();
             burbujaToolStripMenuItem = new ToolStripMenuItem();
             registrosToolStripMenuItem = new ToolStripMenuItem();
+            temporizadoresToolStripMenuItem = new ToolStripMenuItem();
+            relojToolStripMenuItem = new ToolStripMenuItem();
+            editorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,7 +68,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem, temporizadoresToolStripMenuItem, editorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -99,6 +102,27 @@
             registrosToolStripMenuItem.Text = "Registros";
             registrosToolStripMenuItem.Click += registrosToolStripMenuItem_Click;
             // 
+            // temporizadoresToolStripMenuItem
+            // 
+            temporizadoresToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relojToolStripMenuItem });
+            temporizadoresToolStripMenuItem.Name = "temporizadoresToolStripMenuItem";
+            temporizadoresToolStripMenuItem.Size = new Size(224, 26);
+            temporizadoresToolStripMenuItem.Text = "Temporizadores";
+            // 
+            // relojToolStripMenuItem
+            // 
+            relojToolStripMenuItem.Name = "relojToolStripMenuItem";
+            relojToolStripMenuItem.Size = new Size(126, 26);
+            relojToolStripMenuItem.Text = "Reloj";
+            relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
+            // 
+            // editorToolStripMenuItem
+            // 
+            editorToolStripMenuItem.Name = "editorToolStripMenuItem";
+            editorToolStripMenuItem.Size = new Size(224, 26);
+            editorToolStripMenuItem.Text = "Editor";
+            editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -124,5 +148,8 @@
         private ToolStripMenuItem ordenamientosToolStripMenuItem;
         private ToolStripMenuItem burbujaToolStripMenuItem;
         private ToolStripMenuItem registrosToolStripMenuItem;
+        private ToolStripMenuItem temporizadoresToolStripMenuItem;
+        private ToolStripMenuItem relojToolStripMenuItem;
+        private ToolStripMenuItem editorToolStripMenuItem;
     }
 }

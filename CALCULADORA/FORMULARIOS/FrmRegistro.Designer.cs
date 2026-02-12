@@ -38,10 +38,16 @@
             label1 = new Label();
             Nombre = new Label();
             tabPage2 = new TabPage();
+            splitContainer1 = new SplitContainer();
             dataGridView1 = new DataGridView();
+            BTNeLIMINAR = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -133,7 +139,7 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(dataGridView1);
+            tabPage2.Controls.Add(splitContainer1);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -142,21 +148,50 @@
             tabPage2.Text = "Mostrar";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // splitContainer1
+            // 
+            splitContainer1.Location = new Point(6, 6);
+            splitContainer1.Name = "splitContainer1";
+            splitContainer1.Orientation = Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(dataGridView1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(BTNeLIMINAR);
+            splitContainer1.Size = new Size(768, 381);
+            splitContainer1.SplitterDistance = 300;
+            splitContainer1.TabIndex = 1;
+            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(774, 397);
+            dataGridView1.Size = new Size(768, 300);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // BTNeLIMINAR
+            // 
+            BTNeLIMINAR.Enabled = false;
+            BTNeLIMINAR.Location = new Point(327, 23);
+            BTNeLIMINAR.Name = "BTNeLIMINAR";
+            BTNeLIMINAR.Size = new Size(94, 29);
+            BTNeLIMINAR.TabIndex = 0;
+            BTNeLIMINAR.Text = "ELIMINAR";
+            BTNeLIMINAR.UseVisualStyleBackColor = true;
+            BTNeLIMINAR.Click += BTNeLIMINAR_Click;
             // 
             // RegistroAlumnos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(475, 450);
+            ClientSize = new Size(805, 453);
             Controls.Add(tabControl1);
             Name = "RegistroAlumnos";
             Text = "FrmRegistro";
@@ -164,6 +199,10 @@
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             tabPage2.ResumeLayout(false);
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -181,5 +220,7 @@
         private TextBox txtNombre;
         private Label label1;
         private DataGridView dataGridView1;
+        private SplitContainer splitContainer1;
+        private Button BTNeLIMINAR;
     }
 }

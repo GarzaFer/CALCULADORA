@@ -43,5 +43,18 @@ namespace CalculadorA
             RegistroAlumnos registro = new RegistroAlumnos();
             registro.Show();
         }
+
+        private void relojToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTemporizadores Reloj = new FrmTemporizadores();
+            Reloj.Show();
+
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEditor editor = new FrmEditor();
+            editor.Show();
+        }
     }
 }
