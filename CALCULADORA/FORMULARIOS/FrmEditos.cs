@@ -88,11 +88,28 @@ namespace CalculadorA.FORMULARIOS
         {
             texto = rtbEditor.Text;
             string[] palabras = texto.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
-            string[] parrafos = texto.Split(new char[] { '\n'},StringSplitOptions.RemoveEmptyEntries);
+            string[] parrafos = texto.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             // Contar palabras
-                                                                                                                    //la misma línea pero con interpolación de cadenas
-                                                                                                                    //tssStatus.Text = palabras.Length.ToString() + " palabras";
+            //la misma línea pero con interpolación de cadenas
+            //tssStatus.Text = palabras.Length.ToString() + " palabras";
             tssStatus.Text = $"Palabras: {palabras.Length} | Caracteres: {texto.Length}";
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ftdEditor.ShowDialog() == DialogResult.OK)
+            {
+                
+                rtbEditor.Font = ftdEditor.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(cldFoden.ShowDialog() == DialogResult.OK)
+            {
+                rtbEditor.ForeColor = cldFoden.Color;
+            }
         }
     }
 }

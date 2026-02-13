@@ -36,11 +36,16 @@
             guardarComoToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             salirToolStripMenuItem1 = new ToolStripMenuItem();
+            editarToolStripMenuItem = new ToolStripMenuItem();
+            fuenteToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             tssStatus = new ToolStripStatusLabel();
             rtbEditor = new RichTextBox();
             ofdEditor = new OpenFileDialog();
             sfdEditor = new SaveFileDialog();
+            ftdEditor = new FontDialog();
+            colorToolStripMenuItem = new ToolStripMenuItem();
+            cldFoden = new ColorDialog();
             mnsEditor.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -48,7 +53,7 @@
             // mnsEditor
             // 
             mnsEditor.ImageScalingSize = new Size(20, 20);
-            mnsEditor.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem });
+            mnsEditor.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, editarToolStripMenuItem });
             mnsEditor.Location = new Point(0, 0);
             mnsEditor.Name = "mnsEditor";
             mnsEditor.Size = new Size(800, 28);
@@ -100,6 +105,20 @@
             salirToolStripMenuItem1.Size = new Size(187, 26);
             salirToolStripMenuItem1.Text = "Salir";
             // 
+            // editarToolStripMenuItem
+            // 
+            editarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { fuenteToolStripMenuItem, colorToolStripMenuItem });
+            editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            editarToolStripMenuItem.Size = new Size(62, 24);
+            editarToolStripMenuItem.Text = "Editar";
+            // 
+            // fuenteToolStripMenuItem
+            // 
+            fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
+            fuenteToolStripMenuItem.Size = new Size(224, 26);
+            fuenteToolStripMenuItem.Text = "Fuente";
+            fuenteToolStripMenuItem.Click += fuenteToolStripMenuItem_Click;
+            // 
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
@@ -116,7 +135,6 @@
             tssStatus.Size = new Size(76, 20);
             tssStatus.Text = "0 Palabras";
             tssStatus.Click += toolStripStatusLabel1_Click;
-            
             // 
             // rtbEditor
             // 
@@ -136,6 +154,13 @@
             // sfdEditor
             // 
             sfdEditor.Filter = "\"Archivos de Texto\"|*.txt";
+            // 
+            // colorToolStripMenuItem
+            // 
+            colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            colorToolStripMenuItem.Size = new Size(224, 26);
+            colorToolStripMenuItem.Text = "Color";
+            colorToolStripMenuItem.Click += colorToolStripMenuItem_Click;
             // 
             // FrmEditor
             // 
@@ -171,5 +196,10 @@
         private OpenFileDialog ofdEditor;
         private SaveFileDialog sfdEditor;
         private ToolStripStatusLabel tssStatus;
+        private ToolStripMenuItem editarToolStripMenuItem;
+        private ToolStripMenuItem fuenteToolStripMenuItem;
+        private FontDialog ftdEditor;
+        private ToolStripMenuItem colorToolStripMenuItem;
+        private ColorDialog cldFoden;
     }
 }
