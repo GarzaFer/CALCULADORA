@@ -40,6 +40,7 @@
             relojToolStripMenuItem = new ToolStripMenuItem();
             editorToolStripMenuItem = new ToolStripMenuItem();
             contadorToolStripMenuItem = new ToolStripMenuItem();
+            xMLDirecToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem, temporizadoresToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem, temporizadoresToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem, xMLDirecToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -131,6 +132,13 @@
             contadorToolStripMenuItem.Text = "Contador";
             contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
             // 
+            // xMLDirecToolStripMenuItem
+            // 
+            xMLDirecToolStripMenuItem.Name = "xMLDirecToolStripMenuItem";
+            xMLDirecToolStripMenuItem.Size = new Size(224, 26);
+            xMLDirecToolStripMenuItem.Text = "XML Direc";
+            xMLDirecToolStripMenuItem.Click += xMLDirecToolStripMenuItem_Click;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -140,6 +148,7 @@
             MainMenuStrip = menuStrip1;
             Name = "FrmMenu";
             Text = "Menu";
+            Load += FrmMenu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -160,5 +169,6 @@
         private ToolStripMenuItem relojToolStripMenuItem;
         private ToolStripMenuItem editorToolStripMenuItem;
         private ToolStripMenuItem contadorToolStripMenuItem;
+        private ToolStripMenuItem xMLDirecToolStripMenuItem;
     }
 }
